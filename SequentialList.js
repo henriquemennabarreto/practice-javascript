@@ -58,3 +58,17 @@ class SequentialList {
     }
   }
 }
+
+teste = new SequentialList(5);
+
+teste.add(1);
+teste.add(2);
+teste.add(3);
+teste.add(4, 2);
+teste.add(5, 2);
+
+teste.remove(0);
+
+teste.add(6);
+
+teste.print();
