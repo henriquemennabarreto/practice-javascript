@@ -37,4 +37,24 @@ class SequentialList {
     this.last--;
     return index;
   }
+
+  isEmpty() {
+    if (this.last === -1) return true;
+    return false;
+  }
+
+  isFull() {
+    if (this.last === this.list.length - 1) return true;
+    return false;
+  }
+
+  getSize () {
+    return this.last + 1;
+  }
+
+  print() {
+    for (let i = 0; i <= this.last; i++) {
+      console.log(this.list[i]);
+    }
+  }
 }
