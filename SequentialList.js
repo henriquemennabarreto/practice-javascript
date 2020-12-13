@@ -24,4 +24,17 @@ class SequentialList {
     this.last++;
     this.list[index] = value;
   }
+
+  remove(index) {
+    if (this.isEmpty() || (index < 0 || index > this.last)) return false;
+    this.list[index] = null;
+
+    for (let i = index; i <= this.last; i++) {
+      this.list[index] = this.list[index + 1];
+      index++;
+    }
+
+    this.last--;
+    return index;
+  }
 }
